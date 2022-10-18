@@ -1,4 +1,4 @@
-# File extensions to be ignored.
+# Files to be ignored.
 *.swp
 *.swo
 main.c
