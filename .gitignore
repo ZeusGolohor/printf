@@ -1,3 +1,4 @@
 # File extensions to be ignored.
 *.swp
 *.swo
+main.c
