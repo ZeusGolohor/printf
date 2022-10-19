@@ -8,7 +8,8 @@
 /** General Functions */
 int _printf(const char *format, ...);
 /** Frequently Used functions */
-unsigned int _strlen(const char *);
+unsigned int _strlen(char *);
+unsigned int _strlen4const(const char *);
 void *_strcpy(char *dest, const char *src);
 int _write_char(char c);
 /** Structures */

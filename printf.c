@@ -23,18 +23,27 @@ int _printf(const char *format, ...)
 	va_start(list, format);
 	if (format != NULL)
 	{
-		fmtlen = _strlen(format);
+		fmtlen = _strlen4const(format);
 		str = malloc(sizeof(char) * (fmtlen + 1));
 		if (str == NULL)
-			return (0);
-		_strcpy(str, format);
-		/** To break down data */
-		_parser(str, count, snf, list);
+		{
+			/**return (NULL);*/
+			/**free(str);*/
+			/**free(str);*/
+			return (counter);
+		}
+		else
+		{
+			_strcpy(str, format);
+			/** To break down data */
+			_parser(str, count, snf, list);
+			/**free(str);*/
+		}
+		free(str);
 
 	}
-	_write_char('\n');
 	va_end(list);
-	free(str);
+/*	free(str);*/
 	return (counter);
 }
 
@@ -48,7 +57,8 @@ int _printf(const char *format, ...)
 
 void _parser(char *str, int *count, s_f *snf, va_list list)
 {
-	unsigned int i, x;
+	/** unsigned int i, x;*/
+	int i, x;
 
 	i = 0;
 	while (*(str + i) != '\0')
