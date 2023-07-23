@@ -52,6 +52,9 @@ void _printer(const char *format, va_list ap, int **len)
 				case 's':
 					_printchars(va_arg(ap, char *), len);
 					break;
+				case '%':
+					_printchar(format[(i + 1)], len);
+					break;
 			}
 			i = i + 2;
 		}
