@@ -9,11 +9,8 @@
  */
 void _printchar(char c, int **len)
 {
-	if (c != '\0')
-	{
-		write(1, &c, 1);
-		**len = **len + 1;
-	}
+	write(1, &c, 1);
+	**len = **len + 1;
 }
 
 /**
