@@ -32,3 +32,19 @@ void _printchars(char *str, int **len)
 		}
 	}
 }
+
+void _printdecimal(int dec, int **len)
+{
+	char *str;
+	int _len = 0;
+
+	_len = snprintf(NULL, 0, "%d", dec);
+	str = malloc(_len + 1);
+	if (str != NULL)
+	{
+		snprintf(str, (_len + 1), "%d", dec);
+		str[(_len + 1)] = '\0';
+		_printchars(str, len);
+	}
+	free(str);
+}

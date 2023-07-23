@@ -1,5 +1,3 @@
-#include <limits.h>
-#include <stdio.h>
 #include "main.h"
 
 /**
@@ -16,9 +14,8 @@ int main(void)
     void *addr;
     */
     int len;
-    char *c;
-    c = "This is a string.";
-    len = _printf("Let's try to printf a simple sentence%. %s\n", c);
+    int l = 60;
+    len = _printf("%dmm", l);
     printf("%d\n", len);
     /**
     len = _printf("Let's try to printf a simple sentence.\n");

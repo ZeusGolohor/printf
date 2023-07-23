@@ -3,8 +3,11 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <stdarg.h>
+#include <stdlib.h>
 int _printf(const char *, ...);
 void _printchars(char *, int **);
 void _printer(const char *, va_list, int **);
 void _printchar(char, int **);
+void _switch(const char *format, va_list ap, int **len, int **i);
+void _printdecimal(int, int **);
 #endif

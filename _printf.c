@@ -33,33 +33,42 @@ int _printf(const char *format, ...)
  */
 void _printer(const char *format, va_list ap, int **len)
 {
-	int i = 0;
+	int **i, *_i, __i = 0;
 
-	while (format[i] != '\0')
+	_i = &__i;
+	i = &_i;
+	while (format[**i] != '\0')
 	{
-		if (format[i] != '%')
+		if (format[**i] != '%')
 		{
-			_printchar(format[i], len);
-			i = i + 1;
+			_printchar(format[**i], len);
+			**i = **i + 1;
 		}
 		else
 		{
-			switch (format[(i + 1)])
-			{
-				case 'c':
-					_printchar(va_arg(ap, int), len);
-					break;
-				case 's':
-					_printchars(va_arg(ap, char *), len);
-					break;
-				case '%':
-					_printchar(format[(i + 1)], len);
-					break;
-				default:
-					i = i - 1;
-					break;
-			}
-			i = i + 2;
+			_switch(format, ap, len, i);
+			**i = **i + 2;
 		}
+	}
+}
+
+void _switch(const char *format, va_list ap, int **len, int **i)
+{
+	switch (format[(**i + 1)])
+	{
+		case 'c':
+			_printchar(va_arg(ap, int), len);
+			break;
+		case 's':
+			_printchars(va_arg(ap, char *), len);
+			break;
+		case '%':
+			_printchar(format[(**i + 1)], len);
+			break;
+		case 'd':
+			_printdecimal(va_arg(ap, int), len);
+			break;
+		default:
+			**i = **i - 1;
 	}
 }
