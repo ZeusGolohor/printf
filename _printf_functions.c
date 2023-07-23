@@ -9,8 +9,11 @@
  */
 void _printchar(char c, int **len)
 {
-	write(1, &c, 1);
-	**len = **len + 1;
+	if (c != '\0')
+	{
+		write(1, &c, 1);
+		**len = **len + 1;
+	}
 }
 
 /**
@@ -23,9 +26,12 @@ void _printchars(char *str, int **len)
 {
 	int i = 0;
 
-	while (str[i] != '\0')
+	if (str != NULL)
 	{
-		_printchar(str[i], len);
-		i++;
+		while (str[i] != '\0')
+		{
+			_printchar(str[i], len);
+			i++;
+		}
 	}
 }
