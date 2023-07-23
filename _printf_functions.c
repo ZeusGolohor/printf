@@ -33,6 +33,13 @@ void _printchars(char *str, int **len)
 	}
 }
 
+/**
+ * _printdecimal - A function used to print decimal to stdout.
+ * @dec: decimal to be printed.
+ * @len: total length of characters printed to te stdout.
+ *
+ * Return: void.
+ */
 void _printdecimal(int dec, int **len)
 {
 	char *str;

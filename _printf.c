@@ -52,6 +52,15 @@ void _printer(const char *format, va_list ap, int **len)
 	}
 }
 
+/**
+ * _switch - A function used to select the right printer function.
+ * @format: format used during printing.
+ * @ap: a variable that stores all the variadic arguments.
+ * @len: a pointer to a pointer that stores the total character printed.
+ * @i: used to keep track of characters in @format.
+ *
+ * Return: void.
+ */
 void _switch(const char *format, va_list ap, int **len, int **i)
 {
 	switch (format[(**i + 1)])
