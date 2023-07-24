@@ -10,4 +10,6 @@ void _printer(const char *, va_list, int **);
 void _printchar(char, int **);
 void _switch(const char *format, va_list ap, int **len, int **i);
 void _printdecimal(int, int **);
+void _printbinary(int, int **);
+int _pow(int, int);
 #endif

@@ -80,6 +80,9 @@ void _switch(const char *format, va_list ap, int **len, int **i)
 		case 'i':
 			_printdecimal(va_arg(ap, int), len);
 			break;
+		case 'b':
+			_printbinary(va_arg(ap, int), len);
+			break;
 		default:
 			**i = **i - 1;
 	}
