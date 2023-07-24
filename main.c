@@ -8,7 +8,7 @@
 int main(void)
 {
 	int len;
-    len = _printf("%b\n", 98);
+    len = _printf("%b\n", -1);
     _printf("%d\n", len);
     return (0);
 }
