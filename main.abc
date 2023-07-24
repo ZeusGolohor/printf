@@ -14,8 +14,8 @@ int main(void)
     void *addr;
     */
     int len;
-    int l = 60;
-    len = _printf("%dmm", l);
+    int l = 12;
+    len = _printf("%imm", l);
     printf("%d\n", len);
     /**
     len = _printf("Let's try to printf a simple sentence.\n");

@@ -77,6 +77,9 @@ void _switch(const char *format, va_list ap, int **len, int **i)
 		case 'd':
 			_printdecimal(va_arg(ap, int), len);
 			break;
+		case 'i':
+			_printdecimal(va_arg(ap, int), len);
+			break;
 		default:
 			**i = **i - 1;
 	}
