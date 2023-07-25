@@ -22,10 +22,11 @@ void _printchar(char c, int **len)
 void _printchars(char *str, int **len)
 {
 	int i = 0;
+	int buffer = 1024;
 
 	if (str != NULL)
 	{
-		while (str[i] != '\0')
+		while ((str[i] != '\0') && (i <= buffer))
 		{
 			_printchar(str[i], len);
 			i++;

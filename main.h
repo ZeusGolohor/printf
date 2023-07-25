@@ -4,6 +4,7 @@
 #include <unistd.h>
 #include <stdarg.h>
 #include <stdlib.h>
+#include <string.h>
 int _printf(const char *, ...);
 void _printchars(char *, int **);
 void _printer(const char *, va_list, int **);
