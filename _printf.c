@@ -83,6 +83,9 @@ void _switch(const char *format, va_list ap, int **len, int **i)
 		case 'b':
 			_printbinary(va_arg(ap, int), len);
 			break;
+		case 'r':
+			_printstrreversed(va_arg(ap, char *), len, 0);
+			break;
 		default:
 			**i = **i - 1;
 	}

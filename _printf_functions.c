@@ -56,3 +56,20 @@ void _printdecimal(int dec, int **len)
 	}
 	free(str);
 }
+
+/**
+ * _printstrreversed - A function to print a string reversed.
+ * @str: the string to be printed.
+ * @len: the length of the characters printed to the stdout.
+ * @x: integer used to loop through @str.
+ *
+ * Return: void.
+ */
+void _printstrreversed(char *str, int **len, int x)
+{
+	if (str[x] != '\0')
+	{
+		_printstrreversed(str, len, (x + 1));
+		_printchar(str[x], len);
+	}
+}
