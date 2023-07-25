@@ -12,7 +12,7 @@ void _printbinary(int n, int **len)
 	int num = 0;
 	int i = 0;
 	
-	if (n <= 0)
+	if (n == 0)
 		_printchar('0', len);
 	else
 	{
