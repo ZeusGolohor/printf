@@ -86,6 +86,9 @@ void _switch(const char *format, va_list ap, int **len, int **i)
 		case 'r':
 			_printstrreversed(va_arg(ap, char *), len, 0);
 			break;
+		case 'R':
+			_printrot13_ed(va_arg(ap, char *), len);
+			break;
 		default:
 			**i = **i - 1;
 	}

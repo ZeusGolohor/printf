@@ -73,3 +73,26 @@ void _printstrreversed(char *str, int **len, int x)
 		_printchar(str[x], len);
 	}
 }
+
+void _printrot13_ed(char *str, int **len)
+{
+	int i;
+
+	char r1[14] = "abcdefghijklm";
+	char r2[14] = "nopqrstuvwxyz";
+	char R1[14] = "ABCDEFGHIJKLM";
+	char R2[14] = "NOPQRSTUVWXYZ";
+
+	if (str != NULL)
+	{
+		for (i = 0; str[i] != '\0'; i++)
+		{
+			if ((str[i] >= 'a') && (str[i] <= 'z'))
+				rot13_edchecker(str, len, i, 'a', 'z', 'm', 'n', r1, r2);
+			else if ((str[i] >= 'A') && (str[i] <= 'Z'))
+				rot13_edchecker(str, len, i, 'A', 'Z', 'M', 'N', R1, R2);
+			else
+				_printchar(str[i], len);
+		}
+	}
+}

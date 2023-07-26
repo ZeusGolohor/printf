@@ -58,3 +58,31 @@ int _pow(int n, int times)
 	}
 	return (b);
 }
+
+void rot13_edchecker(char *str, int **len, int i, char first, char second, char third, char fourth, char *array1, char *array2)
+{
+	int x;
+
+		if ((str[i] >= first) && (str[i] <= third))
+		{
+			for (x = 0; array1[x] != '\0'; x++)
+			{
+				if (array1[x] == str[i])
+				{
+					_printchar(array2[x], len);
+					break;
+				}
+			}
+		}
+		else if ((str[i] >= fourth) && (str[i] <= second))
+		{
+			for (x = 0; array2[x] != '\0'; x++)
+			{
+				if (array2[x] == str[i])
+				{
+					 _printchar(array1[x], len);
+					 break;
+				}
+			}
+		}
+}
