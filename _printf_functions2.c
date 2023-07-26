@@ -59,6 +59,20 @@ int _pow(int n, int times)
 	return (b);
 }
 
+/**
+ * rot13_edchecker - A function used to check for the right rot13 character.
+ * @str: string to be rot13_ed.
+ * @len: used to keep track of the number of characters printed to the stdout.
+ * @i: used to keep track of characters in @str.
+ * @first: 'a' or 'A'.
+ * @second: 'z' or 'Z'.
+ * @thrid: 'm' or 'M'
+ * @fourth: 'n' or 'N'.
+ * @array1: array of 'a-m or A-M'.
+ * @array2: array of 'n-z or N-Z'
+ *
+ * Return: void.
+ */
 void rot13_edchecker(char *str, int **len, int i, char first, char second, char third, char fourth, char *array1, char *array2)
 {
 	int x;

@@ -74,6 +74,13 @@ void _printstrreversed(char *str, int **len, int x)
 	}
 }
 
+/**
+ * _printrot13_ed - A function to print characters in rot13'ed format.
+ * @str: the string to be rot13'ed.
+ * @len: used to keep track of characters printed to the stdout.
+ *
+ * Return: void.
+ */
 void _printrot13_ed(char *str, int **len)
 {
 	int i;
