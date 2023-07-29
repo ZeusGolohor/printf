@@ -1,12 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "main.h"
 
 /**
  * main - Entry point
  *
- * Return: Always 0
+ * Return: 0 on success, error code otherwise
  */
 int main(void)
 {
-    _printf("%R\n", NULL);
-    return (0);
+	int len, len2;
+
+	len = _printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0);
+	printf("%d\n", len);
+	return (0);
 }

@@ -32,6 +32,10 @@ void _printchars(char *str, int **len)
 			i++;
 		}
 	}
+	else
+	{
+		_printchars("(null)", len);
+	}
 }
 
 /**
