@@ -11,8 +11,7 @@ int main(void)
 {
 	int len;
 
-	len = _printf("%K\n");
+	len = _printf("%");
 	_printf("%d\n", len);
-	
 	return (0);
 }
