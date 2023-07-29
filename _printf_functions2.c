@@ -66,14 +66,15 @@ int _pow(int n, int times)
  * @i: used to keep track of characters in @str.
  * @first: 'a' or 'A'.
  * @second: 'z' or 'Z'.
- * @thrid: 'm' or 'M'
+ * @third: 'm' or 'M'
  * @fourth: 'n' or 'N'.
  * @array1: array of 'a-m or A-M'.
  * @array2: array of 'n-z or N-Z'
  *
  * Return: void.
  */
-void rot13_edchecker(char *str, int **len, int i, char first, char second, char third, char fourth, char *array1, char *array2)
+void rot13_edchecker(char *str, int **len, int i, char first, char second,
+char third, char fourth, char *array1, char *array2)
 {
 	int x;
 
@@ -94,8 +95,8 @@ void rot13_edchecker(char *str, int **len, int i, char first, char second, char 
 			{
 				if (array2[x] == str[i])
 				{
-					 _printchar(array1[x], len);
-					 break;
+					_printchar(array1[x], len);
+					break;
 				}
 			}
 		}

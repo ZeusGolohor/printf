@@ -37,17 +37,20 @@ void _printer(const char *format, va_list ap, int **len)
 
 	_i = &__i;
 	i = &_i;
-	while (format[**i] != '\0')
+	if (format != NULL)
 	{
-		if (format[**i] != '%')
+		while (format[**i] != '\0')
 		{
-			_printchar(format[**i], len);
-			**i = **i + 1;
-		}
-		else
-		{
-			_switch(format, ap, len, i);
-			**i = **i + 2;
+			if (format[**i] != '%')
+			{
+				_printchar(format[**i], len);
+				**i = **i + 1;
+			}
+			else
+			{
+				_switch(format, ap, len, i);
+				**i = **i + 2;
+			}
 		}
 	}
 }
