@@ -93,6 +93,8 @@ void _switch(const char *format, va_list ap, int **len, int **i)
 			_printrot13_ed(va_arg(ap, char *), len);
 			break;
 		default:
+			_printchar('%', len);
 			**i = **i - 1;
+			break;
 	}
 }

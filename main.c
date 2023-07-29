@@ -9,16 +9,10 @@
  */
 int main(void)
 {
-	int len, len2;
+	int len;
 
-	len = _printf(NULL);
-	len2 = printf(NULL);
-	fflush(stdout);
-	if (len != len2)
-	{
-		printf("Lengths differ.\n");
-		fflush(stdout);
-		return (1);
-	}
+	len = _printf("%K\n");
+	_printf("%d\n", len);
+	
 	return (0);
 }
