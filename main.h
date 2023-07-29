@@ -14,5 +14,6 @@ void _printbinary(int, int **);
 int _pow(int, int);
 void _printstrreversed(char *, int **, int);
 void _printrot13_ed(char *, int **);
-void rot13_edchecker(char *, int **, int, char, char, char,char, char *, char *);
+void rot13_edchecker(char *, int **, int, char,
+char, char, char, char *, char *);
 #endif
