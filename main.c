@@ -11,7 +11,7 @@ int main(void)
 {
 	int len;
 
-	len = _printf("%");
+	len = _printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0);
 	_printf("%d\n", len);
 	return (0);
 }
