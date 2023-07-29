@@ -33,7 +33,7 @@ void _printchars(char *str, int **len)
 		}
 	}
 	else
-		_printchars("(nill)", len);
+		_printchars("(null)", len);
 }
 
 /**
